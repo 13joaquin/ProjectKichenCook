@@ -9,6 +9,29 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask countersLayerMask;
     private bool isWalking;
     private Vector3 lastInteractDir;
+       // Start is called before the first frame update
+    private void Start()
+    {
+        gameInput.OnInteractionAction += GameInput_OnInteractAction;
+    }
+    private void GameInput_OnInteractAction(object sender, System.EventArgs e){
+        Vector2 inputVector = gameInput.GetMovementVectorNormlized();
+
+        Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+        
+        if (moveDir != Vector3.zero)
+        {
+            lastInteractDir = moveDir;
+        }
+        float interactDistance = 2f;
+        if (Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance, countersLayerMask))
+        {
+            if(raycastHit.transform.TryGetComponent(out ClearCounter clearCounter)){
+                //Tiene ClearCounter
+                clearCounter.Interact();
+            }
+        }
+    }
     private void Update(){
        HandheldMovement();
        HandheldInteractions();
@@ -30,7 +53,7 @@ public class Player : MonoBehaviour
         {
             if(raycastHit.transform.TryGetComponent(out ClearCounter clearCounter)){
                 //Tiene ClearCounter
-                clearCounter.Interact();
+                
             }
         }
     }
@@ -80,13 +103,9 @@ public class Player : MonoBehaviour
         transform.forward = Vector3.Slerp(transform.forward,moveDir, Time.deltaTime * rotateSpeed);
         //Debug.Log(Time.deltaTime);
     }
-    /* Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+ 
 
-    // Update is called once per frame
+    /* Update is called once per frame
     void Update()
     {
         
