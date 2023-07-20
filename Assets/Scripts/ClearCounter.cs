@@ -2,34 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClearCounter : MonoBehaviour
+public class ClearCounter : MonoBehaviour, IKitchenObjectParent
 {
     
     [SerializeField] public KitchenObjectSO kitchenObjectSO;
     [SerializeField] private Transform counterTopPonit;
-    [SerializeField] public ClearCounter secondClearCounter;
     [SerializeField] private bool testing;
     private KitchenObject kitchenObject;
      //Update is called once per frame
-   private void Update(){
-        if(testing && Input.GetKeyDown(KeyCode.T)){
-            if(kitchenObject != null){
-                kitchenObject.SetClearCounter(secondClearCounter);
-                //Debug.Log(kitchenObject.GetClearCounter());
-            }
-        }
-    }
-    public void Interact (){
+   
+    public void Interact (Player player){
         //Debug.Log("Interact");
         if(kitchenObject == null){
             Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab,counterTopPonit);
-            kitchenObjectTransform.GetComponent<KitchenObject>().SetClearCounter(this);
-            /*kitchenObjectTransform.localPosition = Vector3.zero;
-            kitchenObject =  kitchenObjectTransform.GetComponent<KitchenObject>();
-            kitchenObject.SetClearCounter(this);*/
-            //Debug.Log(kitchenObjectTransform.GetComponent<KitchenObject>().GetKitchenObjectSO().objectName);
-       }else{
-           Debug.Log(kitchenObject.GetClearCounter());
+            kitchenObjectTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(this);
+        }else{
+            //Dar el objeto al jugador
+            kitchenObject.SetKitchenObjectParent(player);
+           //Debug.Log(kitchenObject.GetKitchenObjectParent());
        }
     }
     public Transform GetKitchenObjectFollowTransform(){

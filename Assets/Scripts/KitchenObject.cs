@@ -5,25 +5,25 @@ using UnityEngine;
 public class KitchenObject : MonoBehaviour
 {
     [SerializeField] public KitchenObjectSO kitchenObjectSO;
-    public ClearCounter clearCounter;
+    public IKitchenObjectParent kitchenObjectParent;
     public KitchenObjectSO GetKitchenObjectSO(){
         return kitchenObjectSO;
     }
     
-    public void SetClearCounter(ClearCounter clearCounter){
-        if(this.clearCounter != null){
-            this.clearCounter.ClearKitchenObject();
+    public void SetKitchenObjectParent(IKitchenObjectParent kitchenObjectParent){
+        if(this.kitchenObjectParent != null){
+            this.kitchenObjectParent.ClearKitchenObject();
         }
-        this.clearCounter = clearCounter;
-        if(clearCounter.HasKitchenObject()){
-            Debug.LogError("Counter ya tiene a KitchenObject");
+        this.kitchenObjectParent = kitchenObjectParent;
+        if(kitchenObjectParent.HasKitchenObject()){
+            Debug.LogError("IKitchenObjectParent ya tiene a KitchenObject");
         }
-        clearCounter.SetKichenObject(this);
-        transform.parent = clearCounter.GetKitchenObjectFollowTransform();
+        kitchenObjectParent.SetKichenObject(this);
+        transform.parent = kitchenObjectParent.GetKitchenObjectFollowTransform();
         transform.localPosition = Vector3.zero;
     }
-    public ClearCounter GetClearCounter(){
-        return clearCounter;
+    public IKitchenObjectParent GetKitchenObjectParent(){
+        return kitchenObjectParent;
     }
     /* Start is called before the first frame update
     void Start()

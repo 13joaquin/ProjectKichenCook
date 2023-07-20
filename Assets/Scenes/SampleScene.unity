@@ -635,6 +635,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1712302005}
+--- !u!1 &1019626885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019626886}
+  m_Layer: 0
+  m_Name: KitchenObjectHoldPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1019626886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019626885}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1712302004}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1270719746 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4897803989034774296, guid: 6a623b78c45e24244b198cf0e9ea4a36,
@@ -984,18 +1015,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &1703829089 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7474938226033759980, guid: 6a623b78c45e24244b198cf0e9ea4a36,
-    type: 3}
-  m_PrefabInstance: {fileID: 1746158871808412807}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703829084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b51efc7b0cb87d49acc52b64462f4f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1712302003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1045,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 827260269}
+  - {fileID: 1019626886}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1046,6 +1066,7 @@ MonoBehaviour:
   countersLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  kitchenObjectHoldpPonit: {fileID: 1019626886}
 --- !u!1 &1765047878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,7 +1243,7 @@ PrefabInstance:
         type: 3}
       propertyPath: secondClearCounter
       value: 
-      objectReference: {fileID: 1703829089}
+      objectReference: {fileID: 763126397}
     - target: {fileID: 8036653228720822897, guid: 6a623b78c45e24244b198cf0e9ea4a36,
         type: 3}
       propertyPath: m_RootOrder
