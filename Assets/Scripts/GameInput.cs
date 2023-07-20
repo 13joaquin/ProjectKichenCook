@@ -7,7 +7,7 @@ public class GameInput : MonoBehaviour
 {
     public event EventHandler OnInteractionAction;
     private PlayerInputActions playerInputAction;
-    private void Awake() {
+    public void Awake() {
         playerInputAction = new PlayerInputActions();
         playerInputAction.Player.Enable();
 

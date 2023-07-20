@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8036653228720822897}
-  - component: {fileID: 3149321417119706279}
   - component: {fileID: 7474938226033759980}
   m_Layer: 6
   m_Name: ClearCounter
@@ -36,27 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3149321417119706279
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152401305527184503}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &7474938226033759980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b51efc7b0cb87d49acc52b64462f4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenObjectSO: {fileID: 11400000, guid: efaf03b4269738f4e9de92bf9b6571ea, type: 2}
+  tomatoPrefab: {fileID: 1805864217498940841, guid: e40835ff1a74e6a42b5b3d0c39ed0ea1,
+    type: 3}
   counterTopPonit: {fileID: 4897803989034774296}
 --- !u!1 &6536804100292655516
 GameObject:
