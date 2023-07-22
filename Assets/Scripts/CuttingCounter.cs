@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClearCounter : BaseCounter, IKitchenObjectParent
+public class CuttingCounter : BaseCounter
 {
-    
-    [SerializeField] public KitchenObjectSO kitchenObjectSO;
-     //Update is called once per frame
-   
-    public override void Interact (Player player){
-        //Debug.Log("Interact");
+    [SerializeField] private KitchenObjectSO cutKitchenObjectSO;
+    public override void Interact(Player player)
+    {
         if(!HasKitchenObject()){
             //No hay KitchenObject aqui
             if(player.HasKitchenObject()){
@@ -29,11 +26,13 @@ public class ClearCounter : BaseCounter, IKitchenObjectParent
             }
         }
     }
-    /* Start is called before the first frame update
-    void Start()
+    public override void InteractAlternate(Player player)
     {
-        
+        if(HasKitchenObject()){
+            // Hay un KitchenObject aqui
+            GetKitchenObject().DestroySelf();
+            Transform kitchenObjectTransform = Instantiate(cutKitchenObjectSO.prefab);
+            kitchenObjectTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(this);
+        }
     }
-        
-    }*/
 }

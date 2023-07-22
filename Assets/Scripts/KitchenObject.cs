@@ -25,6 +25,10 @@ public class KitchenObject : MonoBehaviour
     public IKitchenObjectParent GetKitchenObjectParent(){
         return kitchenObjectParent;
     }
+    public void DestroySelf() {
+        kitchenObjectParent.ClearKitchenObject();
+        Destroy(gameObject);
+    }
     /* Start is called before the first frame update
     void Start()
     {
