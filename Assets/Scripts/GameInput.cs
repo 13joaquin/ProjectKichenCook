@@ -13,7 +13,7 @@ public class GameInput : MonoBehaviour
         playerInputAction.Player.Enable();
 
         playerInputAction.Player.Interact.performed += Interact_performed;
-        playerInputAction.Player.InteractAlternate.performed += Interact_performed;
+        playerInputAction.Player.InteractAlternate.performed += InteractAlternate_performed;
     }
     private void InteractAlternate_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj){
         OnInteractionAlternactAction?.Invoke(this, EventArgs.Empty);
