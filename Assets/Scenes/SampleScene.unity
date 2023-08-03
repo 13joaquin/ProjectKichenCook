@@ -2380,6 +2380,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 421939073944886748, guid: 743e7fecd62ec574395c72c93337d391,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4013134957578838803, guid: 743e7fecd62ec574395c72c93337d391,
         type: 3}
       propertyPath: m_RootOrder
@@ -2435,10 +2440,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5590219473462053461, guid: 743e7fecd62ec574395c72c93337d391,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6497314775198209301, guid: 743e7fecd62ec574395c72c93337d391,
         type: 3}
       propertyPath: m_Name
       value: StoveCounter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497314775198209301, guid: 743e7fecd62ec574395c72c93337d391,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
