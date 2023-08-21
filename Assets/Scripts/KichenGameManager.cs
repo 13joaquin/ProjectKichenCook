@@ -58,4 +58,7 @@ public class KichenGameManager : MonoBehaviour
     public float GetCountdownToStartTimer(){
         return countdownToStartTimer;
     }
+    public bool IsGameOver(){
+        return state == State.GameOver;
+    }
 }
