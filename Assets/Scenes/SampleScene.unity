@@ -5323,9 +5323,9 @@ MonoBehaviour:
   keyMoveDownText: {fileID: 1333785156}
   keyMoveLeftText: {fileID: 769133013}
   keyMoveRightText: {fileID: 1372400840}
-  keyMoveInteractText: {fileID: 479286476}
-  keyMoveInteractAlternateText: {fileID: 1006102462}
-  keyMovePauseText: {fileID: 332815678}
+  keyInteractText: {fileID: 479286476}
+  keyInteractAlternateText: {fileID: 1006102462}
+  keyPauseText: {fileID: 332815678}
   keyGamepadInteractText: {fileID: 29881777}
   keyGamepadInteractAlternateText: {fileID: 296665195}
   keyGamepadPauseText: {fileID: 1466132979}

@@ -16,7 +16,7 @@ public class KichenGameManager : MonoBehaviour
         GameOver,
     }
     private State state;
-    private float WaitingToStartTimer = 1f;
+   // private float WaitingToStartTimer = 1f;
     private float countdownToStartTimer = 3f;
     private float gamePlayingTimer;
     private float gamePlayingTimerMax = 50f;
@@ -27,6 +27,14 @@ public class KichenGameManager : MonoBehaviour
     }
     private void Start() {
         GameInput.Instance.OnPauseAction += GameInput_OnPauseAction;
+        GameInput.Instance.OnInteractionAction += GameInput_OnInteractAction;
+
+    }
+    private void GameInput_OnInteractAction(object sender, EventArgs e){
+        if(state == State.WaitingToStart){
+            state = State.CountdownToStart;
+            OnStateChanged?.Invoke(this, EventArgs.Empty);
+        }
     }
     private void GameInput_OnPauseAction(object sender, EventArgs e){
         TogglePauseGame();
@@ -34,12 +42,12 @@ public class KichenGameManager : MonoBehaviour
     private void Update() {
         switch(state){
             case State.WaitingToStart:
-                WaitingToStartTimer -= Time.deltaTime;
+               /* WaitingToStartTimer -= Time.deltaTime;
                 if(WaitingToStartTimer < 0f){
                     state = State.CountdownToStart;
                     OnStateChanged?.Invoke(this, EventArgs.Empty);
                 }
-                break;
+                break;*/
             case State.CountdownToStart:
                 countdownToStartTimer -= Time.deltaTime;
                 if(countdownToStartTimer < 0f){
