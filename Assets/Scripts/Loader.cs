@@ -8,7 +8,8 @@ public static class Loader
     public enum Scene {
         MainMenuScene,
         SampleScene,
-        LoadingScene
+        LoadingScene,
+        CinemachiScene
     }
     private static Scene targetScene;
     public static void Load(Scene targetScene){
