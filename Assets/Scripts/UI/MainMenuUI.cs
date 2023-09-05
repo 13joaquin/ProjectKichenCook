@@ -8,7 +8,6 @@ public class MainMenuUI : MonoBehaviour
 {
     [SerializeField] private Button playButton;
     [SerializeField] private Button quitButton;
-    [SerializeField] private Button cineTutoButton;
     private void Awake() {
         playButton.onClick.AddListener(() =>{
             Loader.Load(Loader.Scene.SampleScene);
@@ -17,9 +16,7 @@ public class MainMenuUI : MonoBehaviour
         quitButton.onClick.AddListener(() =>{
             Application.Quit();
         });
-        cineTutoButton.onClick.AddListener(() =>{
-            Loader.Load(Loader.Scene.CinemachiScene);
-        });
+
         Time.timeScale = 1f;
     }
 }
