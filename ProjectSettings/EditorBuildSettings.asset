@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: ef7484725cdc0e340a920433df3f1ed9
-  - enabled: 1
-    path: Assets/Scenes/CinemachiScene.unity
-    guid: 31b3ed83ea8d36149a7e907bdcbf5406
   m_configObjects: {}

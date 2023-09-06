@@ -338,7 +338,7 @@ MonoBehaviour:
   iconImage: {fileID: 2754236003624283341}
   messageText: {fileID: 168895679706202510}
   successColor: {r: 0.32156864, g: 0.6784314, b: 0.21568628, a: 1}
-  failedColor: {r: 0.67058825, g: 0.09803922, b: 0.0627451, a: 0}
+  failedColor: {r: 0.9716981, g: 0.003666713, b: 0.003666713, a: 0}
   successSprite: {fileID: 21300000, guid: 6c562ac6d3e47ff4794df31886c6d864, type: 3}
   failedSprite: {fileID: 21300000, guid: 0d6e1281049dccc4189bf308b2ccf331, type: 3}
 --- !u!95 &8273260662488881711
@@ -351,7 +351,7 @@ Animator:
   m_GameObject: {fileID: 1592729314624303172}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 139120c2a0ffc944bbc45b3530eab5f4, type: 2}
+  m_Controller: {fileID: 9100000, guid: fe62c0816e36d0948bdb8fa43a048919, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
