@@ -11665,8 +11665,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: fe62c0816e36d0948bdb8fa43a048919, type: 2}
+    - target: {fileID: 8306596265544632574, guid: d1096fa07d774fa41a3c4f1feb46c532,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.448
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4186165510330503282, guid: d1096fa07d774fa41a3c4f1feb46c532, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1096fa07d774fa41a3c4f1feb46c532, type: 3}
