@@ -8,7 +8,7 @@ public class GameOverUI : MonoBehaviour
    [SerializeField] private TextMeshProUGUI recipesDeliveredText;
     private void Start() {
         KichenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
-        Hide();
+        Hide(); 
     }
     private void KitchenGameManager_OnStateChanged(object sender, System.EventArgs e){
         if(KichenGameManager.Instance.IsGameOver()){
